@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  centos:
+    image: centos:centos8
+    container_name: silt2020-before
+    tty: true
+    privileged: true
+    command: /sbin/init
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - '8080:80'
